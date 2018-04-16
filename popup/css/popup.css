@@ -63,6 +63,7 @@ input[type="password"] {
     border-bottom: 1px solid #bbbbbb;
     background: transparent;
     font-size: 18px;
+    outline: 0;
 }
 
 .smallcaps {
@@ -154,12 +155,40 @@ input[type="password"] {
     text-align: left;
 }
 
+.alert_heading p {
+    margin: 0px;
+}
+
 .alert_heading strong {
     font-weight: 400;
 }
 
 #alert_connect {
-    margin-top: 120px;
+    margin-top: 120px; /* 70px */
+}
+
+#alert_connect.webusb {
+    margin-top: 80px;
+}
+
+#alert_connect .connect_wrapper {
+    display: inline-block;
+}
+
+.webusb_option {
+    display: none;
+}
+
+#alert_connect.webusb .webusb_option {
+    display: block;
+}
+
+.webusb_option p {
+    margin: 20px 0px 30px 0px;
+}
+
+.webusb_option button {
+    width: 100%;
 }
 
 
@@ -463,6 +492,22 @@ input[type="password"] {
 #passphrase_input_row input,
 #passphrase_enter button {
     width: 250px;
+}
+
+#passphrase_dialog .warning {
+    color: #fa3e3e;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+#passphrase_dialog.not-valid .warning {
+    display: block;
+}
+
+#passphrase_dialog.not-valid button {
+    border-color: #c5c5c5;
+    color: #c5c5c5;
+    pointer-events: none;
 }
 
 /*
